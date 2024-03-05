@@ -11,4 +11,12 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1.125rem; /* 16px is the base font size for browers,
+                            so 18px/16px base font size = 1.125rem */
+    background-color: #f00;
+    color: #fff;
+    text-shadow: 1px 1px 0px #000;
+    border-radius: 8px;
+    border: 1px solid #c00;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 100%);
   }
