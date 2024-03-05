@@ -53,3 +53,28 @@ header, footer {
   font-family: 'Roberto_Mono';
   src: url('C:\Users\tobec\Downloads\Merriweather,Roboto_Mono\Roboto_Mono\RobotoMono-VariableFont_wght.ttf') format('woff');
 }
+
+
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 16px; /* Adjusted from 10px to 16px for better readability */
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2em; /* This will now compute to 32px */
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1em; /* Adjusted to 1em which will compute to 16px */
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+}
+
+section > h1 + p,
+section > h2 + p {
+  text-indent: 20px;
+}
