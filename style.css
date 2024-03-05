@@ -1,25 +1,45 @@
-html {
-    font-family: sans-serif;
-  }
-  
-  /* Your CSS below here */
+/* General setup */
 
-  div{
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.125rem; /* 16px is the base font size for browers,
-                            so 18px/16px base font size = 1.125rem */
-    background-color: #f00;
-    color: #fff;
-    text-shadow: 1px 1px 0px #000;
-    border-radius: 8px;
-    border: 1px solid #c00;
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 100%);
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2), 
-        inset 2px 2px 4px rgba(255,255,255,0.4),
-        inset -2px -2px 4px rgba(0,0,0,0.4);
-  }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
