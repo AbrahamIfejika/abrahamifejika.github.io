@@ -43,3 +43,13 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+@font-face{
+  font-family: 'Merriweather';
+  src: url('C:\Users\tobec\Downloads\Merriweather\Merriweather-Regular.ttf') format('woff2');
+}
+
+@font-face{
+  font-family: 'Roberto_Mono';
+  src: url('C:\Users\tobec\Downloads\Merriweather,Roboto_Mono\Roboto_Mono\RobotoMono-VariableFont_wght.ttf') format('woff');
+}
