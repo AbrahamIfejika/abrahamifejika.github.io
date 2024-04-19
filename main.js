@@ -7,6 +7,7 @@ function randomValueFromArray(array){
   return array[random];
 }
 
+// Story template and replacement options for placeholders.
 const storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
 const insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
 const insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
@@ -14,8 +15,8 @@ const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewal
 
 randomize.addEventListener('click', result);
 
+// Function to generate and display a new silly story
 function result() {
-    function result() {
         let newStory = storyText;
       
         const xItem = randomValueFromArray(insertX);
@@ -31,12 +32,16 @@ function result() {
     newStory = newStory.replace('Bob', name);
   }
 
+  // Checks whether the UK unit system is selected and converts to units
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
+    const weight = `${Math.round(300 * 0.0714286)} stone`;  // Conversion from pounds to stone
+    const temperature = `${Math.round((94 - 32) * 5 / 9)} centigrade`;  // Conversion from Fahrenheit to Celsius
 
+    newStory = newStory.replace('94 fahrenheit', temperature);
+    newStory = newStory.replace('300 pounds', weight);
   }
 
-  story.textContent = ;
+  // Updates the paragraph with the new story
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
