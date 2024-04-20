@@ -73,6 +73,29 @@ while (balls.length < 25) {
     balls.push(ball);
 }
 
+// Function to loop the animation
+function loop() {
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx.fillRect(0, 0, width, height);
+
+  for (const ball of balls) {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+  }
+
+  requestAnimationFrame(loop);
+}
+
+// Event listener for window resize
+window.addEventListener('resize', function() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+});
+
+// Start the animation loop
+loop();
+
 
 
 
